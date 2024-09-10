@@ -1,9 +1,8 @@
-import Image from "next/image";
-
+import React from "react";
 export default function Home() {
   return (
     <div className="container flex">
-      <h1 className="text-h1 font-sans">Hello bro</h1>
+      <h1 className="text-h1 font-sans"></h1>
     </div>
   );
 }

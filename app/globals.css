@@ -6,6 +6,11 @@
 }
 
 @layer base {
+  i,
+  svg,
+  button {
+    @apply cursor-pointer;
+  }
   h1 {
     @apply text-h1;
   }

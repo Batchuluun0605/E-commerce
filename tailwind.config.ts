@@ -150,7 +150,7 @@ const config: Config = {
           },
         ],
         h4: [
-          "2rem",
+          "4rem",
           {
             lineHeight: "2.75rem",
             letterSpacing: "0rem",
