@@ -1,15 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RiMenu2Line } from "react-icons/ri";
 import { cn } from "@/lib/utils";
@@ -29,7 +20,7 @@ function SidebarMenu() {
       .then((res) => res.json())
       .then((res) => res.data);
 
-  const { data, error, isLoading } = useSWR<Category[]>(
+  const { data, error } = useSWR<Category[]>(
     process.env.NEXT_PUBLIC_API_URL + "/api/categories",
     fetcher
   );
@@ -43,7 +34,7 @@ function SidebarMenu() {
 
   return (
     <>
-      {isLoading && "Loading..."}
+      {/* {isLoading && "Loading..."} */}
       <Sheet>
         <SheetTrigger>
           <RiMenu2Line size={34} />
@@ -60,7 +51,7 @@ function SidebarMenu() {
               <TabsContent value="category">
                 <div className="flex flex-col gap-8 h-full">
                   {data &&
-                    data.slice(0, 20).map((item: Category, idx: number) => (
+                    data.slice(0, 20).map((item: Category) => (
                       <div key={item._id} className="group px-4 py-2">
                         <div className="flex items-center gap-4">
                           <span
@@ -87,7 +78,7 @@ function SidebarMenu() {
               </TabsContent>
               <TabsContent value="page">
                 {pageApi.data &&
-                  pageApi.data.map((item: Page, idx: number) => (
+                  pageApi.data.map((item: Page) => (
                     <div
                       key={item._id}
                       id={item._id}

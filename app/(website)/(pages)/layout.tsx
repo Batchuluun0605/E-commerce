@@ -1,5 +1,4 @@
 import React from "react";
-import Mobilebutton from "@/components/custom/Mobilebuttom";
 import Footer from "@/components/modules/footer";
 import Header from "@/components/modules/header";
 
@@ -11,7 +10,6 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      {/* <Mobilebutton /> */}
       {children}
       <Footer />
     </>

@@ -36,7 +36,7 @@ export type SubPage = {
 export type Product = {
   _id: string;
   name: string;
-  feature: boolean;
+  featured: boolean;
   slug: string;
   description: string;
   category: Category;
@@ -75,3 +75,17 @@ export type SubProduct = {
 };
 
 export type CartType = {};
+
+export type Slide = {
+  _id: string;
+  name: string;
+  link: string;
+  slug: string;
+  title: string;
+  description: string;
+  subtitle: string;
+  btn: string;
+  image: string;
+  textColor: string;
+  createdAt?: string;
+};

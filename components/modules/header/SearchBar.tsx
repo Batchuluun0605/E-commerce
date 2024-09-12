@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -33,7 +25,7 @@ const SearchBar = ({
       .then((res) => res.json())
       .then((res) => res.data);
 
-  const { data, error, isLoading, isValidating } = useSWR<Product[]>(
+  const { data, isLoading, isValidating } = useSWR<Product[]>(
     process.env.NEXT_PUBLIC_API_URL + "/api/products?search" + search,
     fetcher
   );

@@ -2,6 +2,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 import FraamerMotionProvider from "./FraamerMotionProvider";
+import Toastprovider from "./Toastprovider";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -20,6 +21,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
         signUpUrl={`${process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL}`}
         signUpFallbackRedirectUrl="/"
       >
+        <Toastprovider />
         <FraamerMotionProvider>{children}</FraamerMotionProvider>
       </ClerkProvider>
     </div>

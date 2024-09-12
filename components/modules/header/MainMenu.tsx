@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
-import { Category, Page, Product, SubCategory } from "@/types";
+import { Category, Page, SubCategory } from "@/types";
 import { m, AnimatePresence } from "framer-motion";
-import { li } from "framer-motion/client";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,7 +15,7 @@ const MainMenu = () => {
       .then((res) => res.json())
       .then((res) => res.data);
 
-  const { data, error, isLoading, isValidating } = useSWR<Category[]>(
+  const { data, error } = useSWR<Category[]>(
     process.env.NEXT_PUBLIC_API_URL + "/api/categories",
     fetcher
   );

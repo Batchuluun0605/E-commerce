@@ -5,7 +5,6 @@ import { Trash } from "lucide-react";
 import CurrencyFormat from "@/components/custom/CurrencyFormat";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 const CartBar = ({
   openCartBar,
   setOpenCartBar,
