@@ -4,7 +4,7 @@ import { MoveLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   return (
     <div className="h-screen ">
@@ -26,4 +26,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default layout;
+export default Layout;
