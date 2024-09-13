@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import ProductsSidebarLeft from "./ProductsSidebarLeft";
 import ProductsMainContent from "./ProductsMainContent";
 
-const index = () => {
+const Index = () => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(10000);
   const [loading, setLoading] = useState(false);
@@ -39,4 +39,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
