@@ -1,3 +1,4 @@
+"use client";
 import Loading from "@/components/custom/Loading";
 import ProductsContent from "@/components/custom/ProductsContent";
 import ProductsTopBar from "@/components/custom/ProductsTopBar";
@@ -49,7 +50,7 @@ const ProductsMainContent = ({
     };
 
     getProducts();
-  }, [page, filter, perPage, minPrice, maxPrice]);
+  }, [page, filter, perPage, minPrice, maxPrice, setLoading]);
 
   const handleChange = (e: React.ChangeEvent<unknown>, p: number) => {
     setPage(p);
